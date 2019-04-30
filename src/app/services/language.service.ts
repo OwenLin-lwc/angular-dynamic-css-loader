@@ -11,7 +11,7 @@ export class LanguageService {
   langList = ['en', 'ch'];
   langSubject = new BehaviorSubject<string>(this.getDefaultLang());
 
-  constructor(private translate: TranslateService) {}
+  constructor(private translate: TranslateService) { }
 
   private getDefaultLang(): string {
     this.lang = this.langList[0];

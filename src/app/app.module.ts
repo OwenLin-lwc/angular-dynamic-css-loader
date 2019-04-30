@@ -14,16 +14,16 @@ export function translateLoader(http: HttpClient) {
 }
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule, HttpClientModule,
-  TranslateModule.forRoot({
-    loader: {
-      provide: TranslateLoader,
-      useFactory: (translateLoader),
-      deps: [HttpClient]
-    }
-  })
-   ],
-  declarations: [ AppComponent, HelloComponent, CssLoaderComponent ],
-  bootstrap:    [ AppComponent, CssLoaderComponent ]
+  imports: [BrowserModule, FormsModule, HttpClientModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: (translateLoader),
+        deps: [HttpClient]
+      }
+    })
+  ],
+  declarations: [AppComponent, HelloComponent, CssLoaderComponent],
+  bootstrap: [AppComponent, CssLoaderComponent]
 })
 export class AppModule { }
